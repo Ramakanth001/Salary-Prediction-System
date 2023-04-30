@@ -6,7 +6,6 @@ Video file carving is a technique used in digital forensics to recover deleted o
 > **Atom-Classification**
 
 First stage attempts to identify the structure of the video file and attempts to classify the atom boxes in the video file as attributes of individual atoms and their values. Atoms are the lowesst structural units of a video file. We have a dictionary of atoms for classification and the video file will be parsed against it. When a video file is given as input, the video file is converted into hex, and that hex data consists of structural data, video meta data, and frame level data. We just classify the atoms, attributes in them and their values in this stage.
-
 **The below atoms can be classified by our tool:**
 
 ```
@@ -64,7 +63,7 @@ Stage-2 deals with identification and classification of frames. In video, a fram
 ## STAGE-3 : 
 > **Partial-File-Carving**
 
-Stage-3 deals with the redundant attributes present in the atoms classified and tracks them down with their corresponding values. If there is a corruption or missing values of the redundant attributes, then the most probable choice value (max count) is considered to be the final value and is assigned to the attributes in all atoms where the redundancy is found and a new corruption-free fragment is generated.It will also consider the structure-based evidence in order to come up with certain conclusions related to the considered partial file fragment.<br />
+Stage-3 deals with the redundant attributes present in the atoms classified and tracks them down with their corresponding values. If there is a corruption or missing values of the redundant attributes, then the most probable choice value (max count) is considered to be the final value and is assigned to the attributes in all atoms where the redundancy is found and a new corruption-free fragment is generated.It will also consider the structure-based evidence in order to come up with certain conclusions related to the considered partial file fragment. 
 
 **Below ideas are used for partial file carving**
 ```
