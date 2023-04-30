@@ -58,7 +58,7 @@ Stage-2 deals with identification and classification of frames. In video, a fram
 6. *Custom Frame Detection Method (CFDM)
 7. *Optical Flow Frame Detection Method (OFFDM) -> *Horn-Schunck Algorithm is used*
  ```
- ### NOTE: (CFDM is adviced for a naive user)
+ **NOTE: _(CFDM is adviced for a naive user)_**
 
 ## STAGE-3 : 
 > **Partial-File-Carving**
