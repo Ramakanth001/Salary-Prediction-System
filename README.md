@@ -42,16 +42,16 @@ First stage attempts to identify the structure of the video file and attempts to
 ```
 
 ## STAGE-2 :
-> **Frame-Classification**
-> > Stage-2 deals with identification and classification of frames. In video, a frame is a single still image that is displayed on the screen for a specific period of time before being replaced by the next frame. Each frame in a video contains information about the color and brightness values of each pixel in the image, as well as any other metadata that might be associated with the frame, such as the timecode or frame number. If we have enough information, we can identify and extract frames from the hex content we have. <br /> 
-**Below techniques are used to extract key frames:**
-> 1. *Frame-Interval Method (FIM)
-> 2. *Blob Detection using a set of Detection Parameters (BDM)
-> 3. *Absolute Mean Difference Method (AMD)
-> 4. *Root Mean Square Method (RMS)
-> 5. *Background Frame Subtraction Method (BFSM)
-> 6. *Custom Frame Detection Method (CFDM)
-> 7. *Optical Flow Frame Detection Method (OFFDM) -> *Horn-Schunck Algorithm is used*
+**Frame-Classification**
+>  Stage-2 deals with identification and classification of frames. In video, a frame is a single still image that is displayed on the screen for a specific period of time before being replaced by the next frame. Each frame in a video contains information about the color and brightness values of each pixel in the image, as well as any other metadata that might be associated with the frame, such as the timecode or frame number. If we have enough information, we can identify and extract frames from the hex content we have. <br /> 
+>> **Below techniques are used to extract key frames:**
+>> 1. *Frame-Interval Method (FIM)
+>> 2. *Blob Detection using a set of Detection Parameters (BDM)
+>> 3. *Absolute Mean Difference Method (AMD)
+>> 4. *Root Mean Square Method (RMS)
+>> 5. *Background Frame Subtraction Method (BFSM)
+>> 6. *Custom Frame Detection Method (CFDM)
+>> 7. *Optical Flow Frame Detection Method (OFFDM) -> *Horn-Schunck Algorithm is used*
  ### NOTE: (CFDM is adviced for a naive user)
 
 ## STAGE-3 :
