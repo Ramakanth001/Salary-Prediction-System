@@ -5,7 +5,7 @@ Video file carving is a technique used in digital forensics to recover deleted o
 ## STAGE-1 : 
 > **Atom-Classification**
 
-First stage attempts to identify the structure of the video file and attempts to classify the atom boxes in the video file as attributes of individual atoms and their values. Atoms are the lowesst structural units of a video file. We have a dictionary of atoms for classification and the video file will be parsed against it. When a video file is given as input, the video file is converted into hex, and that hex data consists of structural data, video meta data, and frame level data. We just classify the atoms, attributes in them and their values in this stage.<br \>
+First stage attempts to identify the structure of the video file and attempts to classify the atom boxes in the video file as attributes of individual atoms and their values. Atoms are the lowesst structural units of a video file. We have a dictionary of atoms for classification and the video file will be parsed against it. When a video file is given as input, the video file is converted into hex, and that hex data consists of structural data, video meta data, and frame level data. We just classify the atoms, attributes in them and their values in this stage.<br />
 **The below atoms can be classified by our tool:**
 
 ```
