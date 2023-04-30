@@ -64,8 +64,7 @@ Stage-2 deals with identification and classification of frames. In video, a fram
 > **Partial-File-Carving**
 
 Stage-3 deals with the redundant attributes present in the atoms classified and tracks them down with their corresponding values. If there is a corruption or missing values of the redundant attributes, then the most probable choice value (max count) is considered to be the final value and is assigned to the attributes in all atoms where the redundancy is found and a new corruption-free fragment is generated.It will also consider the structure-based evidence in order to come up with certain conclusions related to the considered partial file fragment. 
-
-**Below ideas are used for partial file carving**
+**Below ideas are used for partial file carving:**
 ```
 1. Attribute Redundancy
 2. Intergity Checker
