@@ -3,7 +3,7 @@ Video file carving is a technique used in digital forensics to recover deleted o
 **The project is divided into _3 stages_:**
 ## STAGE-1 : 
 ```
-**Atom-Classification**
+** Atom-Classification **
 ```
 <br />
 
