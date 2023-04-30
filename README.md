@@ -4,7 +4,7 @@ Video file carving is a technique used in digital forensics to recover deleted o
 ## STAGE-1 : 
 > **Atom-Classification** <br />
 >
-First stage attempts to identify the structure of the video file and attempts to classify the atom boxes in the video file as attributes of individual atoms and their values. Atoms are the lowesst structural units of a video file. We have a dictionary of atoms for classification and the video file will be parsed against it. When a video file is given as input, the video file is converted into hex, and that hex data consists of structural data, video meta data, and frame level data. We just classify the atoms, attributes in them and their values in this stage.<br /> **The below atoms can be classified by our tool:*
+First stage attempts to identify the structure of the video file and attempts to classify the atom boxes in the video file as attributes of individual atoms and their values. Atoms are the lowesst structural units of a video file. We have a dictionary of atoms for classification and the video file will be parsed against it. When a video file is given as input, the video file is converted into hex, and that hex data consists of structural data, video meta data, and frame level data. We just classify the atoms, attributes in them and their values in this stage.<br /> **The below atoms can be classified by our tool:**
 ```
 1. ftyp
 2. free
@@ -47,17 +47,18 @@ First stage attempts to identify the structure of the video file and attempts to
 Stage-2 deals with identification and classification of frames. In video, a frame is a single still image that is displayed on the screen for a specific period of time before being replaced by the next frame. Each frame in a video contains information about the color and brightness values of each pixel in the image, as well as any other metadata that might be associated with the frame, such as the timecode or frame number. If we have enough information, we can identify and extract frames from the hex content we have. <br /> 
 **Below techniques are used to extract key frames:**
 > 1. *Frame-Interval Method (FIM)
-2. *Blob Detection using a set of Detection Parameters (BDM)
-3. *Absolute Mean Difference Method (AMD)
-4. *Root Mean Square Method (RMS)
-5. *Background Frame Subtraction Method (BFSM)
-6. *Custom Frame Detection Method (CFDM)
-7. *Optical Flow Frame Detection Method (OFFDM) -> *Horn-Schunck Algorithm is used*
+> 2. *Blob Detection using a set of Detection Parameters (BDM)
+> 3. *Absolute Mean Difference Method (AMD)
+> 4. *Root Mean Square Method (RMS)
+> 5. *Background Frame Subtraction Method (BFSM)
+> 6. *Custom Frame Detection Method (CFDM)
+> 7. *Optical Flow Frame Detection Method (OFFDM) -> *Horn-Schunck Algorithm is used*
  ### NOTE: (CFDM is adviced for a naive user)
 
 ## STAGE-3 :
 > **Partial-File-Carving**
-Stage-3 deals with the redundant attributes present in the atoms classified and tracks them down with their corresponding values. If there is a corruption or missing values of the redundant attributes, then the most probable choice value (max count) is considered to be the final value and is assigned to the attributes in all atoms where the redundancy is found and a new corruption-free fragment is generated.It will also consider the structure-based evidence in order to come up with certain conclusions related to the considered partial file fragment.<br /> **Below ideas are used for partial file carving**
-1. *Attribute Redundancy
-2. *Intergity Checker
-3. *Structural Evidences
+Stage-3 deals with the redundant attributes present in the atoms classified and tracks them down with their corresponding values. If there is a corruption or missing values of the redundant attributes, then the most probable choice value (max count) is considered to be the final value and is assigned to the attributes in all atoms where the redundancy is found and a new corruption-free fragment is generated.It will also consider the structure-based evidence in order to come up with certain conclusions related to the considered partial file fragment.<br />
+> **Below ideas are used for partial file carving**
+>> 1. *Attribute Redundancy
+>> 2. *Intergity Checker
+>> 3. *Structural Evidences
